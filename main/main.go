@@ -35,6 +35,18 @@ func main() {
 	InitDB()
 	defer CloseDB()
 
+	http.HandleFunc("/products", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method == http.MethodGet {
+		} else if r.Method == http.MethodPost {
+
+		} else if r.Method == http.MethodPut {
+
+		} else if r.Method == http.MethodDelete {
+
+		}
+
+	})
+
 	server := http.Server{
 		Addr: "localhost:5050",
 	}
